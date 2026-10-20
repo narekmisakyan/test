@@ -39,7 +39,7 @@ def find_box(a, y_from=230, y_to=470):
     return (best[1], best[2]) if 40 <= best[0] <= 90 else None
 
 from qnum_tm import Recognizer, crop_from_frame
-_R = Recognizer(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "templates.npz"))
+_R = Recognizer(os.path.join(os.path.dirname(os.path.abspath(__file__)), "digit_templates.npz"))
 
 def qnum(im, box):
     crop = crop_from_frame(im, *box)
